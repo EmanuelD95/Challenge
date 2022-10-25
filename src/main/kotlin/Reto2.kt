@@ -8,12 +8,23 @@
  * 0, 1, 1, 2, 3, 5, 8, 13...
  *
  */
-fun fibonacci(anterior: Int = 0,actual : Int = 1) {
-    if(anterior < 50) {
-        if (anterior == 0){
-            println(anterior)
+var esPrimeraVez: Boolean = true
+fun fibonacci(ultimo: Int = 0, actual : Int = 1) {
+    if (esPrimeraVez){
+        esPrimeraVez = false
+        println("Reto #2\n" +
+                " LA SUCESIÓN DE FIBONACCI\n" +
+                " Dificultad: DIFÍCIL\n" +
+                " \n" +
+                " * Enunciado: Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.\n" +
+                " * La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los dos anteriores.\n" +
+                " * 0, 1, 1, 2, 3, 5, 8, 13...")
+    }
+    if(actual < 50) {
+        if (ultimo == 0){
+            println(ultimo)
         }
         println(actual)
-        fibonacci(actual, anterior + actual)
+        fibonacci(actual, ultimo + actual)
     }
 }
